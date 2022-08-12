@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7342" started-at="2022-08-12T23:10:18 ICT" finished-at="2022-08-12T23:10:25 ICT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7342" started-at="2022-08-12T23:10:18 ICT" finished-at="2022-08-12T23:10:25 ICT">
+      <class name="com.testing.qa.JLabsAssignment.Assignment5.APITestAfterRefactor">
+        <test-method status="PASS" signature="signUp()[pri:0, instance:com.testing.qa.JLabsAssignment.Assignment5.APITestAfterRefactor@635572a7]" name="signUp" is-config="true" duration-ms="4210" started-at="2022-08-12T23:10:18 ICT" finished-at="2022-08-12T23:10:22 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUp -->
+        <test-method status="PASS" signature="ConfigAPI()[pri:0, instance:com.testing.qa.JLabsAssignment.Assignment5.APITestAfterRefactor@635572a7]" name="ConfigAPI" duration-ms="1351" started-at="2022-08-12T23:10:22 ICT" finished-at="2022-08-12T23:10:24 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigAPI -->
+        <test-method status="PASS" signature="getNewUsersAPI()[pri:0, instance:com.testing.qa.JLabsAssignment.Assignment5.APITestAfterRefactor@635572a7]" name="getNewUsersAPI" duration-ms="1618" started-at="2022-08-12T23:10:24 ICT" finished-at="2022-08-12T23:10:25 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNewUsersAPI -->
+      </class> <!-- com.testing.qa.JLabsAssignment.Assignment5.APITestAfterRefactor -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
