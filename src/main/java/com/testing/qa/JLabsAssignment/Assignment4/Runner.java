@@ -28,6 +28,7 @@ public class Runner extends BaseWebTest {
 	@Test
 	public void testLogin() {
 
+		// Scenario satu flow sampai checkout
 		driver.get().get("https://www.saucedemo.com/");
 		loginPage.LoginWebTest(username, password);
 		productPage.changeFilter();
@@ -43,6 +44,7 @@ public class Runner extends BaseWebTest {
 
 	}
 
+	// Scenario login dengan username kosong
 	@Test
 	public void loginWithoutUsername() {
 
@@ -50,12 +52,14 @@ public class Runner extends BaseWebTest {
 		loginPage.LoginWithoutUsername(password);
 	}
 
+	// Scenario login dengan password kosong
 	@Test
 	public void loginWithoutPassword() {
 		driver.get().get("https://www.saucedemo.com/");
 		loginPage.LoginWithoutPassword(username);
 	}
 
+	// Scenario login dengan username & pass kosong
 	@Test
 	public void loginWihtoutUserPass() {
 		driver.get().get("https://www.saucedemo.com/");
@@ -63,6 +67,7 @@ public class Runner extends BaseWebTest {
 
 	}
 
+	// Scenario login dengan username & pass salah
 	@Test
 	public void wrongUsername() {
 
@@ -73,6 +78,7 @@ public class Runner extends BaseWebTest {
 		loginPage.LoginWebTest(username, password);
 	}
 
+	// Scenario login dengan password salah
 	@Test
 	public void wrongPassword() {
 

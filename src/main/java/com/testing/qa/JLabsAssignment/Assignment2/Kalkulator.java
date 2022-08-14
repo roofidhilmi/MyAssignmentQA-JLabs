@@ -4,86 +4,110 @@ import java.util.Scanner;
 
 public class Kalkulator {
 
-	Scanner input = new Scanner(System.in);
-	float a, b, nilai, operator, hasil;
-	String Alphabet;
+	public static void main(String[] args) {
 
-	public void perhitungan() {
+		int operation = perhitungan();
 
-		System.out.println("Program perhitungan kalkulator Hilmi");
-		System.out.println("Masukan ankga 1 untuk Penjumlahan");
-		System.out.println("Masukan ankga 2 untuk Pengurangan");
-		System.out.println("Masukan ankga 3 untuk Perkalian");
-		System.out.println("Masukan ankga 4 untuk Pembagian");
+		double angka1 = angkaPertama();
+		double angka2 = angkaKedua();
 
-		System.out.println("Masukan Operasi yang akan digunakan: ");
-		operator = input.nextFloat();
+		double hasil;
+		if (operation == 1) {
+
+			hasil = angka1 + angka2;
+			System.out.println(
+					"Hasil penjumlahan ini adalah " + hasil + " Terimakasih telah menggunakan kalkulator kami");
+		}
+
+		else if (operation == 2) {
+			hasil = angka1 - angka2;
+			System.out.println(
+					"Hasil penjumlahan ini adalah " + hasil + " Terimakasih telah menggunakan kalkulator kami");
+		}
+
+		else if (operation == 3) {
+			hasil = angka1 * angka2;
+			System.out.println(
+					"Hasil penjumlahan ini adalah " + hasil + " Terimakasih telah menggunakan kalkulator kami");
+		}
+
+		else if (operation == 4) {
+			hasil = angka1 % angka2;
+			System.out.println(
+					"Hasil penjumlahan ini adalah " + hasil + " Terimakasih telah menggunakan kalkulator kami");
+		}
 
 	}
 
-	public void inputData() {
+	public static int perhitungan() {
 
-		if (nilai == a) {
-			System.out.println("Silahkan Masukan Angka Pertama: ");
-			a = input.nextInt();
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
 
+		try {
+			System.out.println("Program perhitungan kalkulator Sederhana");
+			System.out.println("Masukan ankga 1 untuk Penjumlahan");
+			System.out.println("Masukan ankga 2 untuk Pengurangan");
+			System.out.println("Masukan ankga 3 untuk Perkalian");
+			System.out.println("Masukan ankga 4 untuk Pembagian");
+			System.out.println("Masukan Operasi yang akan digunakan: ");
+
+			int userInput = scanner.nextInt();
+
+			if (userInput >= 1 && userInput <= 4) {
+
+				return userInput;
+			}
+
+			else {
+				System.out.println("Harap masukan operator yang sesuai!");
+				return perhitungan();
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+
+			System.out.println("silahkan masukan angka!");
+
+			return perhitungan();
 		}
 
-		else if (nilai == b) {
-			System.out.println("Silahkan Masukan Angka Kedua: ");
-			b = input.nextInt();
-		}
-
-		else {
-			System.out.println("salah input data masnya");
-		}
-
-//				System.out.println("Mohon maaf anda salah memasukan nilai!");
-
-//				System.out.println("Mohon maaf anda salah memasukan nilai!");
 	}
 
-	public void OperasiData() {
+	public static double angkaPertama() {
 
-		if (operator == 1) {
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
 
-			hasil = a + b;
-			System.out.println("Hasil penjumlahan ini adalah " + hasil);
+		try {
+			System.out.print("Silahkan masukan angka pertama: ");
+			String userInput = scan.nextLine();
+
+			return Double.parseDouble(userInput);
+
+		} catch (NumberFormatException e) {
+			System.out.println("Harap masukan angka!!");
+
+			return angkaPertama();
 		}
+	}
 
-		else if (operator == 2) {
-			hasil = a - b;
-			System.out.println("Hasil penjumlahan ini adalah " + hasil);
+	public static double angkaKedua() {
+
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
+
+		try {
+			System.out.print("Silahkan masukan angka kedua: ");
+			String userInput = scan.nextLine();
+
+			return Double.parseDouble(userInput);
+
+		} catch (NumberFormatException e) {
+			System.out.println("Harap masukan angka!!");
+
+			return angkaKedua();
 		}
-
-		else if (operator == 3) {
-			hasil = a * b;
-			System.out.println("Hasil penjumlahan ini adalah " + hasil);
-		}
-
-		else if (operator == 4) {
-			hasil = a % b;
-			System.out.println("Hasil penjumlahan ini adalah " + hasil);
-		}
-
-		else {
-			System.out.println(" Maaf pilihan yang anda masukan salah");
-		}
-
-//		System.out.println("Masukan Operasi yang akan digunakan: ");
-//		number3 = input.nextInt();
-//		
-//		switch (number3) {
-//		case 1 : result = number1 + number2; break;
-//		case 2 : result = number1 - number2; break;
-//		case 3 : result = number1 / number2; break;
-//		case 4 : result = number1 % number2; break;
-//		
-//		
-//		}
-
-//		System.out.println("Hasil: " + result);
-
 	}
 
 }
