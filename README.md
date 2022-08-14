@@ -54,6 +54,8 @@ Pada pertemuan ketujuh ini membahas mengenai penggunaan Jmeter dan tugas yang sa
 4. Spike Load Test, 
 5. Database Load Test.
 
+![jmeter](Assignment7.png)
+
 Pada tugas Ketujuh ini dapat diakses di dalam folder berikut:
 
 >Assignment7
